@@ -9,7 +9,7 @@ import retrofit2.http.Path;
 
 public interface ApiDog {
 
-    @GET("api/breeds/List/")
+    @GET("api/breeds/list/")
     Call<BreedListResponse> getBreedList();
 
     @GET("api/breeds/{}/images/")
