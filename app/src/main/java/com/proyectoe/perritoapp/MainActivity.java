@@ -19,10 +19,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity implements AnimalAdapter.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements AnimalAdapter1.OnItemClickListener {
 
     private RecyclerView recyclerView;
-    private AnimalAdapter adapter;
+    private AnimalAdapter1 adapter;
 
     private String perro1;
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements AnimalAdapter.OnI
 
 
         recyclerView = findViewById(R.id.recyclerView);
-        adapter = new AnimalAdapter(initializeAnimals(),this,this);
+        adapter = new AnimalAdapter1(initializeAnimals(),this,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements AnimalAdapter.OnI
     }
 
     @Override
-    public void onClick(AnimalAdapter.ViewHolder viewHolder, String nameAnimal, String url) {
+    public void onClick(AnimalAdapter1.ViewHolder viewHolder, String nameAnimal, String url) {
 
     }
 }

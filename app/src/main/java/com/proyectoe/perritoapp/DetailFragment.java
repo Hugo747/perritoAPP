@@ -1,6 +1,9 @@
 package com.proyectoe.perritoapp;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,20 +12,34 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class DetailFragment {
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link DetailFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class DetailFragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
     private String animalName;
     private String animalURL;
 
     private ImageView imageView;
     private TextView textViewName;
 
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
 
     public DetailFragment() {
         // Required empty public constructor
     }
 
+
+    // TODO: Rename and change types and number of parameters
     public static DetailFragment newInstance(String param1, String param2) {
         DetailFragment fragment = new DetailFragment();
         Bundle args = new Bundle();
@@ -36,13 +53,12 @@ public class DetailFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            animalName = getArguments().getString(ARG_PARAM1);
-            animalURL = getArguments().getString(ARG_PARAM2);
-
-
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    @Override
+
+    @Override//////////////////ON CREATE DEL FRACMEN
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -60,7 +76,6 @@ public class DetailFragment {
 
         return view;
     }
-
 
 
     private void initializeView(View view) {
